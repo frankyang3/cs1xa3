@@ -12,7 +12,7 @@ do
 			;;
 		"Checkout Latest Merge")
 			#checkout the last commit greped that has merge in message
-			git checkout $(echo $(git log -n 1 --all --pretty=oneline --grep='merge') | cut -d' ' -f1)
+			git checkout $(echo $(git log -n 1 --all --pretty=oneline --grep= '/merge/i') | cut -d' ' -f1)
 			;;
 		"File Size List")
 			#lists in human readable file size, removes directories
