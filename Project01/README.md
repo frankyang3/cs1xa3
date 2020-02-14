@@ -1,4 +1,5 @@
-# CS 1XA3 Project01 - <MyMacId>
+# CS 1XA3 Project01 - yangf51
+
 ## Usage
 Execute this script from project root with:
 ```bash
@@ -38,12 +39,16 @@ Description: This feature counts all files inside the repo with a user inputted 
 Execution: Type 4 in the menu. This will show a prompt, type in the file extension such as txt, pdf. 
 Reference: This feature was made with help from https://unix.stackexchange.com/questions/64148/how-do-i-make-ls-show-file-sizes-in-megabytes
 
-## Custom Feature 
-Description: This feature counts all files inside the repo with a user inputted extension (without .)
-Execution: Type 4 in the menu. This will show a prompt, type in the file extension such as txt, pdf. 
-Reference: This feature was made with help from https://unix.stackexchange.com/questions/64148/how-do-i-make-ls-show-file-sizes-in-megabytes
+## Custom Feature - Priority TODO List 
+Description: When selected, this feature will prompt for the user to retrieve the todo list or input a new item. If the user chooses to retrieve the list, the todo list will get printed. If the user chooses to input a new item, the todo list will prompt for a priority and item. The list then sorts the item into the existing list according to priority.
+Execution: Type 5 in the menu. This will show a prompt to either retrieve the list or input a new item. To see the list, type 2. To input a new item, type 1. Then input a priority (higher is higher on list), then input the TODO item. The TODO list will be updated
+Reference: NOT BUILT YET 
 
-## Custom Feature 
-Description: This feature counts all files inside the repo with a user inputted extension (without .)
-Execution: Type 4 in the menu. This will show a prompt, type in the file extension such as txt, pdf.
-Reference: This feature was made with help from https://unix.stackexchange.com/questions/64148/how-do-i-make-ls-show-file-sizes-in-megabytes
+## Custom Feature - Conflict Detector
+Description: This feature will take two file paths, and compare the inside of the files. Any differences will get printed into a separate difflog.txt file. Each difference will show the line number, and both versions of that line.
+Execution: Type 6 in the menu, then you will be prompted to enter 2 file paths, one after the other. The feature will create or overwrite the difflog.txt file showing the differenes of the two files.
+Reference: NOT BUILT YET
+
+
+
+

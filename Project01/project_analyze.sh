@@ -8,11 +8,11 @@ do
 	case $fet in 
 		"FIXME Log")
 			#find all files in repo, grep the tails for FIXME
-			 tail -f -n 1 .. | grep -rl "#FIXME" > fixme.log
+			for i in *; do  tail -1 $i |grep -q "#FIXME"  && echo $i; done > fixme.log
 			;;
 		"Checkout Latest Merge")
 			#checkout the last commit greped that has merge in message
-			git checkout $(echo $(git log -n 1 --all --pretty=oneline --grep= '/merge/i') | cut -d' ' -f1)
+			git checkout $(echo $(git log -n 1 --all --pretty=oneline --grep='merge' -i) | cut -d' ' -f1)
 			;;
 		"File Size List")
 			#lists in human readable file size, removes directories
