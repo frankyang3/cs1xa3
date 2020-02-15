@@ -5,10 +5,10 @@
 PS3='Select the feature you would like to use (Enter the corresponding number)'
 select fet in "FIXME Log" "Checkout Latest Merge" "File Size List" "File Type Count" "Quit"
 do
-	case $fet in 
+	case $fet in
 		"FIXME Log")
 			#find all files in repo, grep the tails for FIXME
-			for i in *; do  tail -1 $i |grep -q "#FIXME"  && echo $i; done > fixme.log
+			for i in `find .. -type f`; do  tail -1 $i |grep -q "#FIXME"  && echo $i; done > fixme.log
 			;;
 		"Checkout Latest Merge")
 			#checkout the last commit greped that has merge in message

@@ -1,2 +1,3 @@
-tester.txt
-testTwa.txt
+../Project01/testTwa.txt
+../Project01/tester.txt
+../Project01/testFix/testTrue.txt
