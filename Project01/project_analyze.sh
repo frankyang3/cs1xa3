@@ -1,7 +1,6 @@
 #!/bin/bash
 
 # Initial Menu
-
 PS3='Select the feature you would like to use (Enter the corresponding number)'
 select fet in "FIXME Log" "Checkout Latest Merge" "File Size List" "File Type Count" "Quit"
 do
