@@ -26,6 +26,7 @@ do
 			echo "There are $(ls -l | grep ".*\.${REPLY}$" | wc -l) .${REPLY} files in the repo"
 			;;
 		"Switch to Executable")
+			#Switches .sh files to executable and allows all users with write permission to execute, also has an option to revert
 			echo "Please type in either change or restore: "
 			>  permissions.log
 			read;
@@ -38,14 +39,28 @@ do
 			fi		
 			;;
 		"Backup and Delete")
+			#Creates a backup of all .tmp files, with a restore file containing paths. Also has an option to restore all backed up .tmp files
 			echo "Please type in either backup or restore"
-			[ -d "backup" ] && rm -r backup; mkdir backup || mkdir backup
 			read;
 			if [ "$REPLY" == 'backup' ]; then
-                                cp `find .. -type f -name "*.tmp"` backup
-				rm `find .. -type f -name "*.tmp" -not -path "./backup/*"`
-                        elif ["$REPLY" == 'restore' ]; then
-                                echo "restore"
+				[ -d "backup" ] && rm -r backup; mkdir backup || mkdir backup
+				if [[ ! -z `find . -type f -name "*.tmp"` ]]; then
+                               		cp `find . -type f -name "*.tmp"` backup
+					find . -type f -name "*.tmp" -not -path "./backup/*"  > ./backup/restore.log
+					rm `find . -type f -name "*.tmp" -not -path "./backup/*"`
+				fi
+                        elif [ "$REPLY" == 'restore' ]; then
+                                if [ -f "./backup/restore.log" ]; then
+					file="./backup/restore.log"
+					while IFS= read -r line
+					do
+						d=`echo "$line" | rev | cut -d"/" -f2-  | rev`
+						f=`echo "$line" | rev | cut -d"/" -f1  | rev`
+						mv "./backup/$f" "$d"
+					done<"$file"	
+				else
+					echo "No backup exists"
+				fi
                         else
                                 echo "Wrong Input"
                         fi
