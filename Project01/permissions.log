@@ -1,0 +1,21 @@
+# file: ../Project01/project_analyze.sh
+# owner: yangf51
+# group: yangf51
+user::rw-
+group::rw-
+other::r--
+
+# file: ../Project01/test.sh
+# owner: yangf51
+# group: yangf51
+user::rw-
+group::rw-
+other::r--
+
+# file: ../Project01/testFix/testF.sh
+# owner: yangf51
+# group: yangf51
+user::rw-
+group::rw-
+other::r--
+

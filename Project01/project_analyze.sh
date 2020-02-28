@@ -3,7 +3,7 @@
 # Initial Menu
 
 PS3='Select the feature you would like to use (Enter the corresponding number)'
-select fet in "FIXME Log" "Checkout Latest Merge" "File Size List" "File Type Count" "Switch to Executable" "Backup and Delete" "Quit" 
+select fet in "FIXME Log" "Checkout Latest Merge" "File Size List" "File Type Count" "Switch to Executable" "Backup and Delete" "Priority TODO" "Conflict Detector"  "Quit" 
 do
 	case $fet in
 		"FIXME Log")
@@ -28,15 +28,22 @@ do
 		"Switch to Executable")
 			#Switches .sh files to executable and allows all users with write permission to execute, also has an option to revert
 			echo "Please type in either change or restore: "
-			>  permissions.log
 			read;
 			if [ "$REPLY" == 'change' ]; then
-				find .. -type f -name "*.sh" | [ -w xargs ] && xargs chmod u+x
-		        elif ["$REPLY" == 'restore' ]; then
-				echo "restore"
-			else
-				echo "Wrong Input"
-			fi		
+				>  permissions.log
+				find .. -type f -name "*.sh" | xargs getfacl>permissions.log
+				cp permissions.log newperms.log
+				sed -i 's/rw-/rwx/g' newperms.log
+				sed -i 's/-w-/-wx/g' newperms.log
+				sed -i 's/r-x/r--/g' newperms.log
+				sed -i 's/--x/---/g' newperms.log
+				setfacl --restore=newperms.log
+				rm newperms.log
+			elif [ "$REPLY" == 'restore' ]; then
+				test -f permissions.log && setfacl --restore=permissions.log || echo "permissions.log does not exists"		
+			else 
+				echo "Wrong input"
+			fi
 			;;
 		"Backup and Delete")
 			#Creates a backup of all .tmp files, with a restore file containing paths. Also has an option to restore all backed up .tmp files
@@ -65,6 +72,13 @@ do
                                 echo "Wrong Input"
                         fi
 
+			;;
+		"Priority TODO")
+			#Creates a priority TODO List, you may then add or retrieve the list
+			
+			;;
+		"Conflict Detector")
+			#Checks two files for differences, the outputs to difflog.txt
 			;;
 		"Quit")
 			#Breaks the select, quits
