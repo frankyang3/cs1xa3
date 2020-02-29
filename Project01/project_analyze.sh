@@ -82,8 +82,10 @@ do
 				test ! -f todo.txt && touch todo.txt
 				echo "Please enter priority number, followed by a space then your TODO message"
 				read;
-				LINE="$REPLY"
-				
+				echo "$REPLY" >> todo.txt
+				sort -k1 -n -r todo.txt >temp
+				rm todo.txt
+				mv temp todo.txt
 			else
 				echo "Wrong input"
 			fi 			

@@ -58,7 +58,7 @@ Menu Reference: Code was used from *https://linuxhint.com/bash_select_command/* 
 
 ## Custom Feature - Conflict Detector  
 **Description:** This feature will take two file paths, and compare the inside of the files. Any differences will get printed into a separate difflog.txt file. Each difference will show the line number, and both versions of that line.  </br> 
-**Execution:** Type 8 in the menu, then you will be prompted to enter 2 file paths, one after the other. The feature will create or overwrite the difflog.txt file showing the differenes of the two files.  </br> 
+**Execution:** Type 8 in the menu, then you will be prompted to enter 2 file paths, one after the other. The feature will create or overwrite the difflog.txt file showing the differences of the two files.  </br> 
 **Reference:** NOT BUILT YET  </br> 
 
 
