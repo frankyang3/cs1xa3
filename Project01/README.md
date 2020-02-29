@@ -66,3 +66,4 @@ Menu Reference: Code was used from *https://linuxhint.com/bash_select_command/* 
 **Execution:** Type 8 in the menu, then you will be prompted to enter 2 file paths, one after the other. The feature will create or overwrite the difflog.txt file showing the differences of the two files.  </br> 
 **Reference:** This feature was made with help from *https://unix.stackexchange.com/questions/81998/understanding-of-diff-output* </br> 
 
+
