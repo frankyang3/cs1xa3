@@ -1,8 +1,0 @@
-Differences of file1.txt to ./backup/restore.log
--a
--b
--c
--d
--e
-+./temp.tmp
-+./testFix/tempF.tmp
