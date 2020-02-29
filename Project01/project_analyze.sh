@@ -30,7 +30,6 @@ do
 			echo "Please type in either change or restore: "
 			read;
 			if [ "$REPLY" == 'change' ]; then
-				>  permissions.log
 				find .. -type f -name "*.sh" | xargs getfacl>permissions.log
 				cp permissions.log newperms.log
 				sed -i 's/rw-/rwx/g' newperms.log
@@ -75,10 +74,33 @@ do
 			;;
 		"Priority TODO")
 			#Creates a priority TODO List, you may then add or retrieve the list
-			
+			echo "Please type in either view or add"
+			read;
+			if [ "$REPLY" == 'view' ]; then
+				test -f todo.txt && cat todo.txt || echo "todo.txt does not exist"
+			elif [ "$REPLY" == 'add' ]; then
+				test ! -f todo.txt && touch todo.txt
+				echo "Please enter priority number, followed by a space then your TODO message"
+				read;
+				LINE="$REPLY"
+				
+			else
+				echo "Wrong input"
+			fi 			
 			;;
 		"Conflict Detector")
 			#Checks two files for differences, the outputs to difflog.txt
+			echo "Please input 2 file names with the path starting from the current directory, separated by a space"
+			read;
+			addr1=`echo "$REPLY" | cut -d" " -f1`
+			addr2=`echo "$REPLY" | cut -d" " -f2`
+			if [[ -f "$addr1" &&  -f "$addr2" ]]; then
+				diff -u  "$addr1"  "$addr2">difflog1.txt
+				sed '1,3d' difflog1.txt>difflog.txt
+				echo "Differences of $addr1 to $addr2" | cat - difflog.txt > temp && mv temp difflog.txt
+			else
+				echo "One or more files do not exist"
+			fi
 			;;
 		"Quit")
 			#Breaks the select, quits
