@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>W3.CSS Template</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+  <script src="https://kit.fontawesome.com/90cb5b3d00.js" crossorigin="anonymous"></script>
+  <!--<link rel="stylesheet" href = "CVcss.css"> -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel='stylesheet' href='roboto.css'>
+  <style>
+  body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+  .w3-bar,h1,button {font-family: "Roboto", sans-serif}
+  </style>
+  <script>
+    $(document).ready(function(){
+      
+    });
+  </script>
+
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-blue w3-card w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="home.html" class="w3-bar-item w3-button w3-padding-large w3-hover-white">Home</a>
+    <a href="home.html#about" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">About Me</a>
+    <a href="index.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Resume</a>
+    <a href="contact.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Contact</a>
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+    <a href="about.html" class="w3-bar-item w3-button w3-padding-large">Home</a>
+    <a href="#about" class="w3-bar-item w3-button w3-padding-large">About Me</a>
+    <a href="index.html" class="w3-bar-item w3-button w3-padding-large">Resume</a>
+    <a href="contact.html" class="w3-bar-item w3-button w3-padding-large">Contact</a>
+  </div>
+</div>
+<br>
+<br>
+<div class="w3-light-grey w3-padding-large w3-padding-32 w3-margin-top" id="contact">
+    <h3 class="w3-center">Contact</h3>
+    <hr>
+    <p>Feel free to contact me through this form! You can also reach me at <br><br><b>yangf51@mcmaster.ca</b> <br><b>437.221.4036</b> </p><br>
+
+    <form action="mailto:frankyang3@gmail.com" method="post" enctype="text/plain">
+      <div class="w3-section">
+        <label>Name</label>
+        <input class="w3-input w3-border" type="text" required name="Name">
+      </div>
+      <div class="w3-section">
+        <label>Email</label>
+        <input class="w3-input w3-border" type="text" required name="Email">
+      </div>
+      <div class="w3-section">
+        <label>Message</label>
+        <input class="w3-input w3-border" required name="Message">
+      </div>
+      <button type="submit" class="w3-button w3-block w3-dark-grey">Send</button>
+    </form><br>
+
+
+<!-- Footer -->
+<footer class="w3-container w3-blue w3-center w3-margin-top">
+    <p><i class="fas fa-network-wired"></i> Connect with me! <i class="fas fa-network-wired"></i> </p>
+    <a href = "https://github.com/frankyang3" target = "_blank"> <i class="fab fa-github w3-hover-opacity"></i></a>
+    <a href = "https://www.linkedin.com/in/frankyang3" target = "_blank"><i class="fab fa-linkedin w3-hover-opacity"></i></a>
+    <p>© 2020 Frank Yang using W3.css </a></p>
+  </footer>
+  
+  <script>
+  // Used to toggle the menu on small screens when clicking on the menu button
+  function myFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+      x.className += " w3-show";
+    } else { 
+      x.className = x.className.replace(" w3-show", "");
+    }
+  }
+  </script>
+  
+  </body>
+  </html>
+  
