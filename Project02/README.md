@@ -1,6 +1,0 @@
-# CS 1XA3 Project02 - yangf51
-## Overview
-This webpage is Frank Yang's  custom CV ...
-## Custom Javascript Code
-Description: this feature does ....
-## References

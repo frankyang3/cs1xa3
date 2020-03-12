@@ -1,288 +1,141 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Frank Yang - Developer</title>
+  <title>Frank Yang</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href = "CVcss.css">
-  <link rel='stylesheet' href='roboto.css'>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> 
   <script src="https://kit.fontawesome.com/90cb5b3d00.js" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <link rel="stylesheet" href="CVcss.css"> 
+  <link rel='stylesheet' href='roboto.css'>
   <style>
-  html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+  body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+  .w3-bar,h1,button {font-family: "Roboto", sans-serif}
+  .fa-desktop{font-size:200px}
   </style>
   <script>
     $(document).ready(function(){
-      $(".exp").hide();
-      $(".comp").hide();
-      $(".edu").hide();
-      $("#experiences").click(function(){
-        $(".exp").toggle(100, function(){
-                if($(this).is(":visible")){
-                  $("#experiences").removeClass("w3-hover-opacity")
-                } else{
-                  $("#experiences").addClass("w3-hover-opacity")
-                }
-        });
+      $("#day").click(function(){
+        if($("div").hasClass("w3-light-grey")){
+          $("div").addClass("w3-black")
+          $("div").removeClass("w3-light-grey")
+          $("#day").addClass("w3-blue")
+          $("#day").removeClass("w3-black")
+        } else if ($("div").hasClass("w3-black")){
+          $("div").addClass("w3-light-grey")
+          $("div").removeClass("w3-black")
+          $("#day").addClass("w3-blue")
+          $("#day").removeClass("w3-light-grey")
+
+          $("#about").removeClass("w3-light-grey")
+
+          $("#nav").removeClass("w3-light-grey")
+          $("#nav").addClass("w3-blue")
+
+          $("#navDemo").removeClass("w3-light-grey")
+          $("#navDemo").addClass("w3-blue")
+         
+
+        }
       });
-      $("#compProg").click(function(){
-        $(".comp").toggle(100, function(){
-                if($(this).is(":visible")){
-                  $("#compProg").removeClass("w3-hover-opacity")
-                } else{
-                  $("#compProg").addClass("w3-hover-opacity")
-                }
-        });
-      });
-      $("#education").click(function(){
-        $(".edu").toggle(100, function(){
-                if($(this).is(":visible")){
-                  $("#education").removeClass("w3-hover-opacity")
-                } else{
-                  $("#education").addClass("w3-hover-opacity")
-                }
-        });
-        
-      });
-  
-      
     });
-    </script>
+  </script>
+  
+
 </head>
+<body>
 
-
-<body class="w3-light-grey">
-
-  <!-- Navbar -->
-  <div class="w3-top ">
-    <div class="w3-bar w3-blue w3-card w3-left-align w3-large">
-      <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-blue" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-      <a href="home.html" class="w3-bar-item w3-button w3-padding-large w3-hover-white">Home</a>
-      <a href="home.html#about" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">About Me</a>
-      <a href="index.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Resume</a>
-      <a href="contact.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Contact</a>
-    </div>
-    <!-- Navbar on small screens -->
-    <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
-      <a href="home.html" class="w3-bar-item w3-button w3-padding-large">Home</a>
-      <a href="home.html#about" class="w3-bar-item w3-button w3-padding-large">About Me</a>
-      <a href="index.html" class="w3-bar-item w3-button w3-padding-large">Resume</a>
-      <a href="contact.html" class="w3-bar-item w3-button w3-padding-large">Contact</a>
-    </div>
-  </div>
-  <br><br><br>
-  <!-- Page Container -->
-  <div class="w3-content w3-margin-top" style="max-width:1400px;">
-
-    <!-- The Grid -->
-    <div class="w3-row-padding">
-    
-      <!-- Left Column -->
-      <div class="w3-third">
-        <!-- Contact Info -->
-        <div class="w3-white w3-text-grey w3-card-4">
-          <div class="w3-display-container">
-            <img src="ProfPic.jpg" style="width:100%" alt="Avatar">
-            <div class="w3-display-topleft w3-container w3-text-white">
-              <h2>Frank Yang</h2>
-            </div>
-          </div>
-          <div class="w3-container">
-            <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-blue"></i>Developer</p>
-            <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-blue"></i>Toronto, ON</p>
-            <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-blue"></i>yangf51@mcmaster.ca</p>
-            <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-blue"></i>437.221.4036</p>
-            <hr>
-            <!-- Skills -->
-            <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-blue"></i>Skills</b></p>
-            <p>Java<br>C++</p>
-            <p>HTML<br>CSS<br>Javascript<br>JQuery</p>
-            <p>ReactJS<br>Python(Django)</p>
-            <p>Bash & Git</p>
-            <p>Haskell</p>
-            <p>MATLAB & Base R</p>
-            <p>Arduinos</p>
-            <br>
-
-            <p class="w3-large w3-text-theme"><b><i class="fa fa-globe fa-fw w3-margin-right w3-text-blue"></i>Languages</b></p>
-            <p>English</p>
-            <p>Mandarin</p>
-            <br>
-
-          </div>
-        </div><br>
-
-      <!-- End Left Column -->
-      </div>
-
-      <!-- Right Column -->
-      <div class="w3-twothird">
-        <!-- Experiences -->
-        <div class="w3-container w3-card w3-white w3-margin-bottom w3-hover-opacity" id="experiences">
-          <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-briefcase fa-fw w3-margin-right w3-xxlarge w3-text-blue"></i>Experiences</h2>
-          <div class="w3-container exp">
-            <h5 class="w3-opacity"><b>Haskell Integral Calculator</b></h5>
-            <h6 class="w3-text-blue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2019 - 2019</span></h6> 
-            <div class="w3-container w3-content">
-              <ui>
-                <li>Created an integral calculator that computes riemann sums with recursion and functional programming</li>
-                <li>Built as the final assignment of Computer Science I, based on the foundations of functional programming and computing</li>
-                <li>Implemented the MonteCarlo Integration method and random number generation for calculating areas of circular shapes</li>
-                <li>Created several general methods as well as specific integral calculators to allow for easy editing and modular bug testing</li>
-              </ul>
-            </div>
-            <hr>
-          </div>
-          <div class="w3-container exp">
-            <h5 class="w3-opacity"><b>DeltaHacks ReactJS Project</b></h5>
-            <h6 class="w3-text-blue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2019 - 2019</h6>
-            <div class="w3-container w3-content">
-              <ui>
-                <li>Built a online chat app using ReactJS and the Chatkit API during the Deltahacks hackathon</li>
-                <li>Built 4 different chatrooms that users can connect to online</li>
-                <li>Constructed a user verification system using emails</li>
-                <li>Created a private chatroom where only whitelisted users could access</li>
-              </ul>
-            </div>
-            <hr>
-          </div>
-          <div class="w3-container exp">
-            <h5 class="w3-opacity"><b>ReactJS Projects</b></h5>
-            <h6 class="w3-text-blue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2019 - 2019</h6>
-            <div class="w3-container w3-content">
-              <ui>
-                <li>Built a board game on React</li>
-                <li>Built a meme generator that overlays text on top of randomly picked images from an API</li>
-                <li>Utilized state, components, props, HTML, and CSS to build projects</li>
-                <li>Tested and ran all projects on a simple npm server</li>
-              </ul>
-            </div>
-            <hr>
-          </div>
-          <div class="w3-container exp">
-            <h5 class="w3-opacity"><b>Soil Analysis Robot</b></h5>
-            <h6 class="w3-text-blue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2018 - 2019</h6>
-            <div class="w3-container w3-content">
-              <ui>
-                <li>Created a web interface and developed a means of real time communication between the robot and computer through web sockets and bluetooth</li>
-                <li>Built and designed the physical aspects of the robot with a modular design</li>
-                <li>Unit tested different components of the project, including both code and mechanical pieces to ensure proper usage</li>
-                <li>Connected a camera to provide real time feedback from the robot to the user. This was displayed on a interactive interface on the web GUI, allowing the robot to collect samples from a selected area</li>
-                <li>Purchased and selected different components based on design on a limited budget of $500</li>
-                <li>Programmed the microcontrollers movement algorithm to control the robotic arm to move in a more efficient manner</li>
-              </ul>
-            </div>
-            <hr>
-          </div>
-          <div class="w3-container exp">
-            <h5 class="w3-opacity"><b>TOPS Webteam Operations Manager</b></h5>
-            <h6 class="w3-text-blue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2018 - 2019</h6>
-            <div class="w3-container w3-content">
-              <ui>
-                <li>Worked as a leader to a team working to maintain the TOPS website on a daily basis</li>
-                <li>Added registration feature to generate reports for the TOPS program application in 2018</li>
-                <li>Upgraded the website software to make sure it was stable and secure</li>
-              </ul>
-            </div>
-            <hr>
-          </div>
-          <div class="w3-container exp">
-            <h5 class="w3-opacity"><b>McMaster Guitar Club Teacher</b></h5>
-            <h6 class="w3-text-blue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2019 - 2019</h6>
-            <div class="w3-container w3-content">
-              <ui>
-                <li>Guitar Teacher at the McMaster University Guitar Club</li>
-                <li>Prepares and leads guitar lessons weekly to around 10 students</li>
-                <li>Collaborates and communicates with other teachers as well as students</li>
-              </ul>
-            </div>
-            <hr>
-          </div>
-          <div class="w3-container exp">
-            <h5 class="w3-opacity"><b>Kumon Teacher's Assistant</b></h5>
-            <h6 class="w3-text-blue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2017 - 2019</h6>
-            <div class="w3-container w3-content">
-              <ui>
-                <li>Improved students’ math skills through teaching of Calculus and Vectors</li>
-                <li>Increased leadership and communication skills as a senior teacher</li>
-                <li>Mentored junior instructors how to wo rk as a teacher’s assistant</li>
-                <li>Worked with a variety of different people, from parents to younger students, to co-workers, improving communication</li>
-              </ul>
-            </div>
-            <hr>
-          </div>
-        </div>
-        <!-- Comp Programming -->
-        <div class="w3-container w3-card w3-white w3-margin-bottom w3-hover-opacity" id = "compProg">
-          <h2 class="w3-text-grey w3-padding-16"><i class="fas fa-keyboard fa-fw w3-margin-right w3-xxlarge w3-text-blue"></i>Competitive Programming</h2>
-          <div class="w3-container comp">
-            <h5 class="w3-opacity"><b>International Collegiate Programming Contest</b></h5>
-            <h6 class="w3-text-blue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2019 - 2019</h6>
-            <div class="w3-container w3-content">
-              <ui>
-                <li>Entered the school team in first year by placing top 9 during tryouts</li>
-                <li>Placed 42 out of 132 teams during the Central America regional competition, with schools across both USA and Canada</li>
-                <li>Used a variety of algorithms and data structures, including Djikstras, Kruskals, DFS, BFS, BinTrees, Binary search, Queues, Arrays, Hashes in 3 different languages; Python Java and C++</li>
-                <li>Competed as a team of 3, collaborating to solve problems under a strict time limit</li>
-              </ul>
-            </div>
-            <hr>
-          </div>
-          <div class="w3-container comp">
-            <h5 class="w3-opacity"><b>Canadian Computing Competition</b></h5>
-            <h6 class="w3-text-blue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2019 - 2019</h6>
-            <div class="w3-container w3-content">
-              <ui>
-                <li>Placed in the Honour Roll, top 5% in Canada</li>
-                <li>Self taught Algorithms and Data Structures</li>
-              </ul>
-            </div>
-            <hr>
-          </div>
-        </div>
-        <!-- Education -->
-        <div class="w3-container w3-card w3-white w3-hover-opacity" id = "education">
-          <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-blue"></i>Education</h2>
-          <div class="w3-container edu">
-            <h5 class="w3-opacity"><b>McMaster University (4.0 GPA)</b></h5>
-            <h6 class="w3-text-blue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2019 - <span class="w3-tag w3-blue w3-round">Current</span></h6>
-            
-            <hr>
-          </div>
-          <div class="w3-container edu">
-            <h5 class="w3-opacity"><b>Marc Garneau C.I. TOPS Program</b></h5>
-            <h6 class="w3-text-blue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2015 - 2019</h6>
-            <hr>
-          </div>
-        </div>
-
-      <!-- End Right Column -->
-      </div>
-      
-    <!-- End Grid -->
-    </div>
-    
-    <!-- End Page Container -->
+<!-- Navbar -->
+<div class="w3-top">
+  <div id = 'nav'class="w3-bar w3-blue w3-card w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-blue" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="index.html" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
+    <a href="#about" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">About Me</a>
+    <a href="cv.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Resume</a>
+    <a href="contact.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Contact</a>
   </div>
 
-  <footer class="w3-container w3-blue w3-center w3-margin-top">
-    <p><i class="fas fa-network-wired"></i> Connect with me! <i class="fas fa-network-wired"></i> </p>
-    <a href = "https://github.com/frankyang3" target = "_blank"> <i class="fab fa-github w3-hover-opacity"></i></a>
-    <a href = "https://www.linkedin.com/in/frankyang3" target = "_blank"><i class="fab fa-linkedin w3-hover-opacity"></i></a>
-    <p>© 2020 Frank Yang using W3.css </a></p>
-  </footer>
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+    <a href="about.html" class="w3-bar-item w3-button w3-padding-large">Home</a>
+    <a href="#about" class="w3-bar-item w3-button w3-padding-large">About Me</a>
+    <a href="index.html" class="w3-bar-item w3-button w3-padding-large">Resume</a>
+    <a href="contact.html" class="w3-bar-item w3-button w3-padding-large">Contact</a>
+  </div>
+</div>
+<!-- Header -->
+<header data-aos = "flip-down" class="w3-container w3-blue w3-center" style="padding: 255px 16px">
+  <h1 class="w3-margin w3-jumbo">FRANK YANG</h1>
+  <p class="w3-xlarge">Computer Science Student</p>
+  <a href="cv.html" class="w3-button w3-black w3-padding-large w3-large w3-margin-top">My Porfolio</a>
+</header>
 
-  <script>
-    // Used to toggle the menu on small screens when clicking on the menu button
-    function myFunction() {
-      var x = document.getElementById("navDemo");
-      if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
-      } else { 
-        x.className = x.className.replace(" w3-show", "");
-      }
-    }
-    </script>
+<!-- First Grid -->
+<div data-aos="fade-left" id = "about" class="w3-row-padding w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-twothird">
+      <h1>Hey there, </h1>
+      <h5 class="w3-padding-32 w3-margin-right"> I am a first year computer science student, always interested in building interesting side projects, exploring new technologies, and enjoy occasional horrible singing and guitar playing.</h5>
+
+      <p class="w3-text-grey w3-margin-right">Some of my recent projects involved attending Deltahacks, building a Chat app using React and the ChatKit API. I have also been dabbling in work with Python and machine learning algorithms. This year, I am looking for a front-end or web application job. My next steps will be to learn NodeJs and integrate a serverside component into my React. </p>
+    </div>
+
+    <div class="w3-third w3-center ">
+      <img data-aos="fade-up" id = "img1" class = "w3-padding-64"src="FrankyFace.jpg" style="width:100%" alt="PicOfMe">
+    </div>
+  </div>
+  
+</div>
+
+<!-- Second Grid -->
+<div data-aos = "fade-left" class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-third w3-center w3-padding-64">
+      <i aos-data="fade-down" class="fa fa-desktop w3-padding-64 w3-text-blue"></i>
+    </div>
+
+    <div class="w3-twothird ">
+      <h1 class = "w3-margin-left">Latest Project</h1>
+      <h5 class="w3-padding-32 w3-margin-left">This site!</h5>
+
+      <p class="w3-text-grey w3-margin-left">This site will be my latest project, using the w3.css template. All animations were made using jquery, and the pages were written in HTML5. The menu is resizable if the window size is small enough. Give it a try!
+        Below I have some cool features made using jquery, give them a try! Also try resizing the window ;)
+      </p>
+    </div>
+    <br>
+    <div id = "day" class = "w3-button w3-blue"> Day/Night</div>
+  </div>
+</div>
+
+
+<!-- Footer -->
+<footer class="w3-container w3-blue w3-center w3-margin-top">
+  <p><i class="fas fa-network-wired"></i> Connect with me! <i class="fas fa-network-wired"></i> </p>
+  <a href = "https://github.com/frankyang3" target = "_blank"> <i class="fab fa-github w3-hover-opacity"></i></a>
+  <a href = "https://www.linkedin.com/in/frankyang3" target = "_blank"><i class="fab fa-linkedin w3-hover-opacity"></i></a>
+  <p>© 2020 Frank Yang using W3.css </a></p>
+</footer>
+
+
+<script>
+  //init AOS
+    AOS.init();
+</script>
+<script>
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
 
 </body>
 </html>

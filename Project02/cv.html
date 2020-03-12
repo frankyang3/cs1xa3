@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Frank Yang - Developer</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href = "CVcss.css">
+  <link rel='stylesheet' href='roboto.css'>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://kit.fontawesome.com/90cb5b3d00.js" crossorigin="anonymous"></script>
+  <style>
+  html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+  </style>
+  <script>
+    $(document).ready(function(){
+      $(".exp").hide();
+      $(".comp").hide();
+      $(".edu").hide();
+      $("#experiences").click(function(){
+        $(".exp").toggle(100, function(){
+                if($(this).is(":visible")){
+                  $("#experiences").removeClass("w3-hover-opacity")
+                } else{
+                  $("#experiences").addClass("w3-hover-opacity")
+                }
+        });
+      });
+      $("#compProg").click(function(){
+        $(".comp").toggle(100, function(){
+                if($(this).is(":visible")){
+                  $("#compProg").removeClass("w3-hover-opacity")
+                } else{
+                  $("#compProg").addClass("w3-hover-opacity")
+                }
+        });
+      });
+      $("#education").click(function(){
+        $(".edu").toggle(100, function(){
+                if($(this).is(":visible")){
+                  $("#education").removeClass("w3-hover-opacity")
+                } else{
+                  $("#education").addClass("w3-hover-opacity")
+                }
+        });
+        
+      });
+  
+      
+    });
+    </script>
+</head>
+
+
+<body class="w3-light-grey">
+
+  <!-- Navbar -->
+  <div class="w3-top ">
+    <div class="w3-bar w3-blue w3-card w3-left-align w3-large">
+      <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-blue" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+      <a href="index.html" class="w3-bar-item w3-button w3-padding-large w3-hover-white">Home</a>
+      <a href="index.html#about" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">About Me</a>
+      <a href="cv.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-white">Resume</a>
+      <a href="contact.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Contact</a>
+    </div>
+    
+    <!-- Navbar on small screens -->
+    <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+      <a href="home.html" class="w3-bar-item w3-button w3-padding-large">Home</a>
+      <a href="home.html#about" class="w3-bar-item w3-button w3-padding-large">About Me</a>
+      <a href="index.html" class="w3-bar-item w3-button w3-padding-large">Resume</a>
+      <a href="contact.html" class="w3-bar-item w3-button w3-padding-large">Contact</a>
+    </div>
+  </div>
+  <br><br><br>
+  <!-- Page Container -->
+  <div class="w3-content w3-margin-top" style="max-width:1400px;">
+
+    <!-- The Grid -->
+    <div class="w3-row-padding">
+    
+      <!-- Left Column -->
+      <div class="w3-third">
+        <!-- Contact Info -->
+        <div class="w3-white w3-text-grey w3-card-4">
+          <div class="w3-display-container">
+            <img src="ProfPic.jpg" style="width:100%" alt="Avatar">
+            <div class="w3-display-topleft w3-container w3-text-white">
+              <h2>Frank Yang</h2>
+            </div>
+          </div>
+          <div class="w3-container">
+            <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-blue"></i>Developer</p>
+            <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-blue"></i>Toronto, ON</p>
+            <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-blue"></i>yangf51@mcmaster.ca</p>
+            <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-blue"></i>437.221.4036</p>
+            <hr>
+            <!-- Skills -->
+            <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-blue"></i>Skills</b></p>
+            <p>Java<br>C++</p>
+            <p>HTML<br>CSS<br>Javascript<br>JQuery</p>
+            <p>ReactJS<br>Python(Django)</p>
+            <p>Bash & Git</p>
+            <p>Haskell</p>
+            <p>MATLAB & Base R</p>
+            <p>Arduinos</p>
+            <br>
+
+            <p class="w3-large w3-text-theme"><b><i class="fa fa-globe fa-fw w3-margin-right w3-text-blue"></i>Languages</b></p>
+            <p>English</p>
+            <p>Mandarin</p>
+            <br>
+
+          </div>
+        </div><br>
+
+      <!-- End Left Column -->
+      </div>
+
+      <!-- Right Column -->
+      <div class="w3-twothird">
+        <!-- Experiences -->
+        <div class="w3-container w3-card w3-white w3-margin-bottom w3-hover-opacity" id="experiences">
+          <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-briefcase fa-fw w3-margin-right w3-xxlarge w3-text-blue"></i>Experiences</h2>
+          <div class="w3-container exp">
+            <h5 class="w3-opacity"><b>Haskell Integral Calculator</b></h5>
+            <h6 class="w3-text-blue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2019 - 2019</span></h6> 
+            <div class="w3-container w3-content">
+              <ui>
+                <li>Created an integral calculator that computes riemann sums with recursion and functional programming</li>
+                <li>Built as the final assignment of Computer Science I, based on the foundations of functional programming and computing</li>
+                <li>Implemented the MonteCarlo Integration method and random number generation for calculating areas of circular shapes</li>
+                <li>Created several general methods as well as specific integral calculators to allow for easy editing and modular bug testing</li>
+              </ul>
+            </div>
+            <hr>
+          </div>
+          <div class="w3-container exp">
+            <h5 class="w3-opacity"><b>DeltaHacks ReactJS Project</b></h5>
+            <h6 class="w3-text-blue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2019 - 2019</h6>
+            <div class="w3-container w3-content">
+              <ui>
+                <li>Built a online chat app using ReactJS and the Chatkit API during the Deltahacks hackathon</li>
+                <li>Built 4 different chatrooms that users can connect to online</li>
+                <li>Constructed a user verification system using emails</li>
+                <li>Created a private chatroom where only whitelisted users could access</li>
+              </ul>
+            </div>
+            <hr>
+          </div>
+          <div class="w3-container exp">
+            <h5 class="w3-opacity"><b>ReactJS Projects</b></h5>
+            <h6 class="w3-text-blue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2019 - 2019</h6>
+            <div class="w3-container w3-content">
+              <ui>
+                <li>Built a board game on React</li>
+                <li>Built a meme generator that overlays text on top of randomly picked images from an API</li>
+                <li>Utilized state, components, props, HTML, and CSS to build projects</li>
+                <li>Tested and ran all projects on a simple npm server</li>
+              </ul>
+            </div>
+            <hr>
+          </div>
+          <div class="w3-container exp">
+            <h5 class="w3-opacity"><b>Soil Analysis Robot</b></h5>
+            <h6 class="w3-text-blue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2018 - 2019</h6>
+            <div class="w3-container w3-content">
+              <ui>
+                <li>Created a web interface and developed a means of real time communication between the robot and computer through web sockets and bluetooth</li>
+                <li>Built and designed the physical aspects of the robot with a modular design</li>
+                <li>Unit tested different components of the project, including both code and mechanical pieces to ensure proper usage</li>
+                <li>Connected a camera to provide real time feedback from the robot to the user. This was displayed on a interactive interface on the web GUI, allowing the robot to collect samples from a selected area</li>
+                <li>Purchased and selected different components based on design on a limited budget of $500</li>
+                <li>Programmed the microcontrollers movement algorithm to control the robotic arm to move in a more efficient manner</li>
+              </ul>
+            </div>
+            <hr>
+          </div>
+          <div class="w3-container exp">
+            <h5 class="w3-opacity"><b>TOPS Webteam Operations Manager</b></h5>
+            <h6 class="w3-text-blue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2018 - 2019</h6>
+            <div class="w3-container w3-content">
+              <ui>
+                <li>Worked as a leader to a team working to maintain the TOPS website on a daily basis</li>
+                <li>Added registration feature to generate reports for the TOPS program application in 2018</li>
+                <li>Upgraded the website software to make sure it was stable and secure</li>
+              </ul>
+            </div>
+            <hr>
+          </div>
+          <div class="w3-container exp">
+            <h5 class="w3-opacity"><b>McMaster Guitar Club Teacher</b></h5>
+            <h6 class="w3-text-blue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2019 - 2019</h6>
+            <div class="w3-container w3-content">
+              <ui>
+                <li>Guitar Teacher at the McMaster University Guitar Club</li>
+                <li>Prepares and leads guitar lessons weekly to around 10 students</li>
+                <li>Collaborates and communicates with other teachers as well as students</li>
+              </ul>
+            </div>
+            <hr>
+          </div>
+          <div class="w3-container exp">
+            <h5 class="w3-opacity"><b>Kumon Teacher's Assistant</b></h5>
+            <h6 class="w3-text-blue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2017 - 2019</h6>
+            <div class="w3-container w3-content">
+              <ui>
+                <li>Improved students’ math skills through teaching of Calculus and Vectors</li>
+                <li>Increased leadership and communication skills as a senior teacher</li>
+                <li>Mentored junior instructors how to wo rk as a teacher’s assistant</li>
+                <li>Worked with a variety of different people, from parents to younger students, to co-workers, improving communication</li>
+              </ul>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <!-- Comp Programming -->
+        <div class="w3-container w3-card w3-white w3-margin-bottom w3-hover-opacity" id = "compProg">
+          <h2 class="w3-text-grey w3-padding-16"><i class="fas fa-keyboard fa-fw w3-margin-right w3-xxlarge w3-text-blue"></i>Competitive Programming</h2>
+          <div class="w3-container comp">
+            <h5 class="w3-opacity"><b>International Collegiate Programming Contest</b></h5>
+            <h6 class="w3-text-blue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2019 - 2019</h6>
+            <div class="w3-container w3-content">
+              <ui>
+                <li>Entered the school team in first year by placing top 9 during tryouts</li>
+                <li>Placed 42 out of 132 teams during the Central America regional competition, with schools across both USA and Canada</li>
+                <li>Used a variety of algorithms and data structures, including Djikstras, Kruskals, DFS, BFS, BinTrees, Binary search, Queues, Arrays, Hashes in 3 different languages; Python Java and C++</li>
+                <li>Competed as a team of 3, collaborating to solve problems under a strict time limit</li>
+              </ul>
+            </div>
+            <hr>
+          </div>
+          <div class="w3-container comp">
+            <h5 class="w3-opacity"><b>Canadian Computing Competition</b></h5>
+            <h6 class="w3-text-blue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2019 - 2019</h6>
+            <div class="w3-container w3-content">
+              <ui>
+                <li>Placed in the Honour Roll, top 5% in Canada</li>
+                <li>Self taught Algorithms and Data Structures</li>
+              </ul>
+            </div>
+            <hr>
+          </div>
+        </div>
+        <!-- Education -->
+        <div class="w3-container w3-card w3-white w3-hover-opacity" id = "education">
+          <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-blue"></i>Education</h2>
+          <div class="w3-container edu">
+            <h5 class="w3-opacity"><b>McMaster University (4.0 GPA)</b></h5>
+            <h6 class="w3-text-blue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2019 - <span class="w3-tag w3-blue w3-round">Current</span></h6>
+            
+            <hr>
+          </div>
+          <div class="w3-container edu">
+            <h5 class="w3-opacity"><b>Marc Garneau C.I. TOPS Program</b></h5>
+            <h6 class="w3-text-blue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2015 - 2019</h6>
+            <hr>
+          </div>
+        </div>
+
+      <!-- End Right Column -->
+      </div>
+      
+    <!-- End Grid -->
+    </div>
+    
+    <!-- End Page Container -->
+  </div>
+
+  <footer class="w3-container w3-blue w3-center w3-margin-top">
+    <p><i class="fas fa-network-wired"></i> Connect with me! <i class="fas fa-network-wired"></i> </p>
+    <a href = "https://github.com/frankyang3" target = "_blank"> <i class="fab fa-github w3-hover-opacity"></i></a>
+    <a href = "https://www.linkedin.com/in/frankyang3" target = "_blank"><i class="fab fa-linkedin w3-hover-opacity"></i></a>
+    <p>© 2020 Frank Yang using W3.css </a></p>
+  </footer>
+
+  <script>
+    // Used to toggle the menu on small screens when clicking on the menu button
+    function myFunction() {
+      var x = document.getElementById("navDemo");
+      if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+      } else { 
+        x.className = x.className.replace(" w3-show", "");
+      }
+    }
+    </script>
+
+</body>
+</html>
