@@ -7,47 +7,12 @@
   <link rel="stylesheet" href = "CVcss.css">
   <link rel='stylesheet' href='roboto.css'>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="cv.js"></script>
   <script src="https://kit.fontawesome.com/90cb5b3d00.js" crossorigin="anonymous"></script>
   <style>
   html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
   </style>
-  <script>
-    $(document).ready(function(){
-      $(".exp").hide();
-      $(".comp").hide();
-      $(".edu").hide();
-      $("#experiences").click(function(){
-        $(".exp").toggle(100, function(){
-                if($(this).is(":visible")){
-                  $("#experiences").removeClass("w3-hover-opacity")
-                } else{
-                  $("#experiences").addClass("w3-hover-opacity")
-                }
-        });
-      });
-      $("#compProg").click(function(){
-        $(".comp").toggle(100, function(){
-                if($(this).is(":visible")){
-                  $("#compProg").removeClass("w3-hover-opacity")
-                } else{
-                  $("#compProg").addClass("w3-hover-opacity")
-                }
-        });
-      });
-      $("#education").click(function(){
-        $(".edu").toggle(100, function(){
-                if($(this).is(":visible")){
-                  $("#education").removeClass("w3-hover-opacity")
-                } else{
-                  $("#education").addClass("w3-hover-opacity")
-                }
-        });
-        
-      });
-  
-      
-    });
-    </script>
+
 </head>
 
 
@@ -62,7 +27,7 @@
       <a href="cv.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-white">Resume</a>
       <a href="contact.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Contact</a>
     </div>
-    
+
     <!-- Navbar on small screens -->
     <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
       <a href="home.html" class="w3-bar-item w3-button w3-padding-large">Home</a>
