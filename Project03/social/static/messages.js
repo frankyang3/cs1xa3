@@ -3,8 +3,29 @@
    ********************************************************************************************
    */
 function submitPost(event) {
-    alert('Post Button Pressed');
+    
+    var data = document.getElementById("post-text").innerHTML;
+    let json_data = { 'postContent' : data };
+    
+    let url_path = post_submit_url;
+    
+    // AJAX post
+    $.post(url_path,
+            json_data,
+            frResponse);
     // TODO Objective 8: send contents of post-text via AJAX Post to post_submit_view (reload page upon success)
+}
+
+
+// Refresher
+function frResponse(data,status) {
+    if (status == 'success') {
+        // reload page to update like count
+        location.reload();
+    }
+    else {
+        alert('Error' + status);
+    }
 }
 
 /* ********************************************************************************************
@@ -12,7 +33,21 @@ function submitPost(event) {
    ********************************************************************************************
    */
 function submitLike(event) {
-    alert('Like Button Pressed');
+    
+    //$(event.target).addClass("w3-disabled");
+    //$(this).removeClass("like-button");
+
+    let data = event.target.id;
+    
+    let json_data = { 'postID' : data };
+    //onsole.log(like_url);
+    let url_path = "like/";
+    //alert("GOT PAST CODE");
+    // AJAX post
+    $.post(url_path,
+            json_data,
+            frResponse);
+    //alert("POSTED");
     // TODO Objective 10: send post-n id via AJAX POST to like_view (reload page upon success)
 }
 
