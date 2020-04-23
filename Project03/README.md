@@ -63,7 +63,7 @@ Description:
 Exceptions:
 - Note that if someone accepts your friend request, you will have to refresh the page to update it, but if you accept a friend request it will automatically update for you
 
-Objective 07 and 08 and 09 and 10
+## Objective 07 and 08 and 09 and 10
 Description:
 - This shows messages.djhtml, the page shown when first logged in
 - When you send a message, messages.js sends an ajax POST, which saves the message and username in the messages database
