@@ -61,20 +61,20 @@ def account_view(request):
             else:
                 messages.error(request, 'Please correct the error below.')
             if u_form.is_valid():
-                newemployment=u_form.cleaned_data['employment']
-                newlocation=u_form.cleaned_data['location']
-                newbirthday=u_form.cleaned_data['birthday']
-                newinterest=u_form.cleaned_data['interest']
-                user_info.employment=newemployment
-                user_info.location=newlocation
-                user_info.birthday=newbirthday
+                employ=u_form.cleaned_data['employment']
+                loc=u_form.cleaned_data['location']
+                birth=u_form.cleaned_data['birthday']
+                inter=u_form.cleaned_data['interest']
+                user_info.employment=employ
+                user_info.location=loc
+                user_info.birthday=birth
                 user_info.save()
-                if models.Interest.objects.filter(label=newinterest).exists():
-                    if not user_info.interests.filter(label=newinterest).exists():
-                        i=models.Interest.objects.get(label=newinterest)
+                if models.Interest.objects.filter(label=inter).exists():
+                    if not user_info.interests.filter(label=inter).exists():
+                        i=models.Interest.objects.get(label=inter)
                         user_info.interests.add(i)
                 else:
-                    i=models.Interest.objects.create(label=newinterest)
+                    i=models.Interest.objects.create(label=inter)
                     user_info.interests.add(i)
                 return redirect('social:account_view')
         else:
