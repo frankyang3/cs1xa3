@@ -37,6 +37,7 @@ Description:
 - Upon pressing login, it creates a pop up modal, with 2 inputs, username and password
 - Logging in makes a post request to e/yangf51/messages.djhtml
 - In signup.djhtml, a user may input a username and password to create a new user on the site
+
 Exceptions:
 - If the /e/yangf51/login.djhtml is called without arguments is redirects
 to login.djhtml
@@ -47,6 +48,7 @@ Description:
 - There are 2 forms on this page, one to change password, one to change about me
 - Simply follow the instructions given to change your account info or password
 - The information will be displayed on the left column
+
 Exceptions:
 - Note that all fields must be filled in a form to submit
 - Password changes have requirements of minimum length and characters, unlike signup
@@ -60,6 +62,7 @@ Description:
 - You can send a friend request to any person
 - You can accept incoming friend requests on the right column, this is done through people.js sending an ajax POST request
 - If the person accepts your friend request, you become friends, and his nae will appear on the right column in messages
+
 Exceptions:
 - Note that if someone accepts your friend request, you will have to refresh the page to update it, but if you accept a friend request it will automatically update for you
 
@@ -70,5 +73,6 @@ Description:
 - The page shows all messages saved within the database, initally shows 1. Pressing more will show 2 more messages
 - Pressing like will log the username as a liker for the message, making sure the user cannot like multiple times
 - Upon pressing like, the page reloads due to messages.js, and the like is shown
+
 Exceptions:
 - Note that when another user likes a message, it will not be shown unti the page is refreshed
